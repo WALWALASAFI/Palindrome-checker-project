@@ -1,16 +1,10 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   const textInput = document.getElementById('text-input');
   const checkBtn = document.getElementById('check-btn');
   const resultDiv = document.getElementById('result');
 
-  checkBtn.addEventListener('click', function () {
+  checkBtn.addEventListener('click', () => {
     const inputValue = textInput.value.trim();
-
-    if (inputValue === '') {
-      alert('Please input a value');
-      return;
-    }
-
     const isPalindrome = checkPalindrome(inputValue);
 
     if (isPalindrome) {
