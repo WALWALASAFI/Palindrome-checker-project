@@ -5,26 +5,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Define checkPalindrome function before it's used
   function checkPalindrome(str) {
-    const alphanumericStr = str.replace(/[\W_]/g, '').toLowerCase();
-    const reversedStr = alphanumericStr.split('').reverse().join('');
-    return alphanumericStr === reversedStr;
+      const alphanumericStr = str.replace(/[\W_]/g, '').toLowerCase();
+      const reversedStr = alphanumericStr.split('').reverse().join('');
+      return alphanumericStr === reversedStr;
   }
 
   checkBtn.addEventListener('click', () => {
-    const inputValue = textInput.value.trim();
+      const inputValue = textInput.value.trim();
 
-		 // Check if input value is empty
-		 if (inputValue === '') {
-			alert('Please input a value');
-			return; // Exit the function early if no input value
-	}
-	
-    const isPalindrome = checkPalindrome(inputValue);
+      // Check if input value is empty
+      if (inputValue === '') {
+          alert('Please input a value');
+          return; // Exit the function early if no input value
+      }
 
-    if (isPalindrome) {
-      resultDiv.textContent = `${inputValue} is a palindrome`;
-    } else {
-      resultDiv.textContent = `${inputValue} is not a palindrome`;
-    }
+      const isPalindrome = checkPalindrome(inputValue);
+
+      if (isPalindrome) {
+          resultDiv.textContent = `${inputValue} is a palindrome`;
+      } else {
+          resultDiv.textContent = `${inputValue} is not a palindrome`;
+      }
   });
 });
