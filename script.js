@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Check if input value is empty
       if (inputValue === '') {
-          alert('Please input a value');
+          window.alert('Please input a value');
           return; // Exit the function early if no input value
       }
 
