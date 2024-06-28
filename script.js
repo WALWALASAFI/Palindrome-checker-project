@@ -12,6 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   checkBtn.addEventListener('click', () => {
     const inputValue = textInput.value.trim();
+
+		 // Check if input value is empty
+		 if (inputValue === '') {
+			alert('Please input a value');
+			return; // Exit the function early if no input value
+	}
+	
     const isPalindrome = checkPalindrome(inputValue);
 
     if (isPalindrome) {
